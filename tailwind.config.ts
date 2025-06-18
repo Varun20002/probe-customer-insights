@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,33 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// DealProbe AI brand colors
+				brand: {
+					gray: {
+						900: '#111827',
+						800: '#1F2937',
+					},
+					indigo: {
+						600: '#6366F1',
+					},
+					sky: {
+						400: '#38BDF8',
+					},
+					emerald: {
+						500: '#10B981',
+					},
+					slate: {
+						500: '#6B7280',
+					},
+					rose: {
+						500: '#EF4444',
+					}
 				}
+			},
+			fontFamily: {
+				'clash': ['Clash Display', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +111,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fade-up 0.3s ease-out',
+				'slide-up': 'slide-up 0.4s ease-out'
+			},
+			backdropBlur: {
+				'8': '8px',
 			}
 		}
 	},
